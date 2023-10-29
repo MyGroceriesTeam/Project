@@ -36,38 +36,63 @@ MyGroceries is designed to help users manage their groceries and make shopping a
 - **Scope:**
 
 ## Product Spec
-
 ### 1. User Stories (Required and Optional)
-
 **Required Must-have Stories**
-
-* [fill in your required user stories here]
-* ...
+* User can see a list of their grocery contents with expire date, purchase date, name and an image
+* User can set a date purchased and expiration date if needed
+* User can login to an account
+* User can create a new acccount
+* User recieves a notifcation for when something is about to expire
+* User can upload a picture of the item
+* User can see list of categories of groceries ie fruits and vegatables are listed in their own seperate tab
+* User can designate a type like dry good, fruit, dairy, etc
+* User can delete entries
+* user can see days left on an item, change image, or add notes
 
 **Optional Nice-to-have Stories**
-
-* [fill in your required user stories here]
-* ...
-
+* User can see an indicator of when an item is about to expire in app.
+* User can modify an exisiting entry
+* User can search for an item
+* User can use their camera to take a photo and use it for the item
+  
 ### 2. Screen Archetypes
-
-- [ ] [list first screen here]
-* [list associated required story here]
-* ...
-list second screen here]
-* [list associated required story here]
-* ...
-
+* Login Screen
+    * User can login 
+* Registration
+    * User can Create an account
+* Item list screen
+    *  User can see a list of their grocery contents with expire date, purchase date, name and an image
+    *  User can see list of categories of groceries ie fruits and vegatables are listed in their own seperate tab
+    *  User can see an indicator of when an item is about to expire in app.
+    *  User can delete entries
+* Item Creation Screen 
+    *   User can upload a picture of the item
+    *   User can set a date purchased and expiration date if needed
+    *   User can designate a type like dry good, fruit, dairy, etc
+    *   User can modify an exisiting entry
+    *   User can use their camera to take a photo and use it for the item
+* Outside app
+    * User recieves a notifcation for when something is about to expire
+* Alert Page
+    *  User recieves a notifcation for when something is about to expire   
+* Specific Item Infomation Page
+    * user can see days left on an item, change image, or add notes
+…
 ### 3. Navigation
-
-**Tab Navigation** (Tab to Screen)
-
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+Tab Navigation (Tab to Screen)
+* Alert page
+* Item list page 
+Flow Navigation (Screen to Screen)
+* Login Screen
+    => Alert Page
+* Registration Screen
+    => Alert Page
+* Item List page
+    => Item creation Screen
+    => a specific item infomation page
+  
 
 **Flow Navigation** (Screen to Screen)
-
 - Login Screen
 * SignUp Screen
 * Expiration Alert Screen
