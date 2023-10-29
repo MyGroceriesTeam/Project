@@ -68,21 +68,17 @@ list second screen here]
 
 **Flow Navigation** (Screen to Screen)
 
-- [ ] [list first screen here]
-* [list screen navigation here]
-* ...
-- [ ] [list second screen here]
-* [list screen navigation here]
-* ...
+- Login Screen
+* SignUp Screen
+* Expiration Alert Screen
+- Item List Screen
+  *Item Creation Screen
+  *Item Details Screen
+- Categories Screen
 
 ## Wireframes
+![WhatsApp Image 2023-10-29 at 18 57 54](https://github.com/MyGroceriesTeam/Project/assets/124225302/c97fc885-df86-4d4f-aa7e-6e1a8a605ce3)
 
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
-
-### [BONUS] Digital Wireframes & Mockups
-
-### [BONUS] Interactive Prototype
 
 ## Schema 
 
