@@ -28,12 +28,12 @@ MyGroceries is designed to help users manage their groceries and make shopping a
 ### App Evaluation
 
 [Evaluation of your app across the following attributes]
-- **Category:**
-- **Mobile:**
-- **Story:**
-- **Market:**
-- **Habit:**
-- **Scope:**
+- **Category: Tracking, Planning, Management**
+- **Mobile: Iphone**
+- **Story: Keep things organized and save money/time**
+- **Market: Parents, general audiences**
+- **Habit: Weekly**
+- **Scope: person to person**
 
 ## Product Spec
 ### 1. User Stories (Required and Optional)
