@@ -104,6 +104,15 @@ Flow Navigation (Screen to Screen)
 ## Wireframes
 ![WhatsApp Image 2023-10-29 at 18 57 54](https://github.com/MyGroceriesTeam/Project/assets/124225302/c97fc885-df86-4d4f-aa7e-6e1a8a605ce3)
 
+## Progress Gifs
+
+<div>
+    <a href="https://www.loom.com/share/f21befd7ec604463bf2f90beb2b7cf9a">
+    </a>
+    <a href="https://www.loom.com/share/f21befd7ec604463bf2f90beb2b7cf9a">
+      <img style="max-width:300px;" src="null">
+    </a>
+  </div>
 
 ## Schema 
 
