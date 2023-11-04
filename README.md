@@ -110,7 +110,7 @@ Flow Navigation (Screen to Screen)
     <a href="https://www.loom.com/share/f21befd7ec604463bf2f90beb2b7cf9a">
     </a>
     <a href="https://www.loom.com/share/f21befd7ec604463bf2f90beb2b7cf9a">
-      <img style="max-width:300px;" src="null">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/f21befd7ec604463bf2f90beb2b7cf9a-with-play.gif">
     </a>
   </div>
 
