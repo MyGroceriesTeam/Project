@@ -38,16 +38,16 @@ MyGroceries is designed to help users manage their groceries and make shopping a
 ## Product Spec
 ### 1. User Stories (Required and Optional)
 **Required Must-have Stories**
-* User can see a list of their grocery contents with expire date, purchase date, name and an image
-* User can set a date purchased and expiration date if needed
-* User can login to an account
-* User can create a new acccount
+* User can see a list of their grocery contents with expire date, purchase date, name and an image (page UI created, Backend Logic in progress)
+* User can set a date purchased and expiration date if needed(page UI created, Backend Logic in progress)
+* User can login to an account(page UI created, Backend Logic in progress)
+* User can create a new acccount(page UI created, Backend Logic in progress)
 * User recieves a notifcation for when something is about to expire
 * User can upload a picture of the item
-* User can see list of categories of groceries ie fruits and vegatables are listed in their own seperate tab
+* User can see list of categories of groceries ie fruits and vegatables are listed in their own seperate tab(page UI created, Backend Logic in progress)
 * User can designate a type like dry good, fruit, dairy, etc
 * User can delete entries
-* user can see days left on an item, change image, or add notes
+* user can see days left on an item, change image, or add notes(page UI created, Backend Logic in progress)
 
 **Optional Nice-to-have Stories**
 * User can see an indicator of when an item is about to expire in app.
