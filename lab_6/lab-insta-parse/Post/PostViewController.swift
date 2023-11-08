@@ -98,7 +98,7 @@ class PostViewController: UIViewController {
                         currentUser.save { [weak self] result in
                             switch result {
                             case .success(let user):
-                                print("✅ User Saved! \(user)")
+                                print("wrong \(user)")
 
                                 // Switch to the main thread for any UI updates
                                 DispatchQueue.main.async {
