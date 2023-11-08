@@ -55,4 +55,4 @@ Who: A wide range of users but partically those that have busy day to day lives 
 
 Why: Often times, we buy things from the green grocier and you forget when you bought something. By the time you find it again, you could have bought an extra when the orginal is still usable or its expired when you want to use it. Using Green Utopia, you can cut the food waste, better plan your meals, and live a healthy life.
 
-Challenges: We would have to get permissions from users for camera and photo usage. There would also need to be notifications for when something is about to expire. So, permssions for those too. Dates of things would also have to be stored. 
+C
