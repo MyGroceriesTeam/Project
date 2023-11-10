@@ -2,7 +2,7 @@
 //  ItemDetailViewController.swift
 //  MyGroceries
 //
-//  Created by Frannie Witbeck on 11/10/23.
+//  Created by Catherine McGinnis on 11/10/23.
 //
 
 import UIKit
@@ -26,4 +26,16 @@ class ItemDetailViewController: UIViewController {
     }
     */
 
+//    @IBOutlet weak var dateLabels: UILabel!
+//
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//
+//        dateLabels.layer.cornerRadius = 2
+//
+//    }
+    
+    
 }
+
+
