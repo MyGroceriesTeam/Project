@@ -2,7 +2,7 @@
 
 import UIKit
 
-// TODO: Pt 1 - Import Parse Swift
+
 import ParseSwift
 
 class SignUpViewController: UIViewController {
@@ -18,7 +18,7 @@ class SignUpViewController: UIViewController {
 
     @IBAction func onSignUpTapped(_ sender: Any) {
 
-        // Make sure all fields are non-nil and non-empty.
+        
         guard let username = usernameField.text,
               let email = emailField.text,
               let password = passwordField.text,
@@ -41,13 +41,13 @@ class SignUpViewController: UIViewController {
             switch result {
             case .success(let user):
 
-                print("✅ Successfully signed up user \(user)")
+                print("\(user) signed up")
 
-                // Post a notification that the user has successfully signed up.
+               
                 NotificationCenter.default.post(name: Notification.Name("login"), object: nil)
 
             case .failure(let error):
-                // Failed sign up
+            
                 self?.showAlert(description: error.localizedDescription)
             }
         }
