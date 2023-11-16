@@ -15,6 +15,13 @@ class ItemDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBOutlet weak var itemNameLabel: UILabel!
+    @IBOutlet weak var itemCategoryLabel: UILabel!
+    @IBOutlet weak var notesLabel: UILabel!
+    @IBOutlet weak var datePurchasedLabel: UILabel!
+    @IBOutlet weak var dateExpiredLabel: UILabel!
+    @IBOutlet weak var itemImageLabel: UIImageView!
+    
 
     /*
     // MARK: - Navigation
