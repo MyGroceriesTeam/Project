@@ -105,7 +105,7 @@
 		CB73D388290E3B4A00C12538 = {
 			isa = PBXGroup;
 			children = (
-				CB73D393290E3B4A00C12538 /* MyGroceries */,
+				CB73D393290E3B4A00C12538 /* lab-insta-parse */,
 				CB73D392290E3B4A00C12538 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -118,7 +118,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CB73D393290E3B4A00C12538 /* MyGroceries */ = {
+		CB73D393290E3B4A00C12538 /* lab-insta-parse */ = {
 			isa = PBXGroup;
 			children = (
 				CB73D394290E3B4A00C12538 /* AppDelegate.swift */,
@@ -134,7 +134,7 @@
 				CB73D3A2290E3B4C00C12538 /* Info.plist */,
 				CB6997472910E7E3007EDA6B /* Fonts */,
 			);
-			path = MyGroceries;
+			path = "lab-insta-parse";
 			sourceTree = "<group>";
 		};
 		CB7896FB29371C2300635932 /* Models */ = {
@@ -385,7 +385,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MA6H73S726;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyGroceries/Info.plist;
+				INFOPLIST_FILE = "lab-insta-parse/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -413,7 +413,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MA6H73S726;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyGroceries/Info.plist;
+				INFOPLIST_FILE = "lab-insta-parse/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
