@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
 
             showMissingFieldsAlert()
             return
-        }
+    }
 
         
         User.login(username: username, password: password) { [weak self] result in
@@ -32,8 +32,9 @@ class LoginViewController: UIViewController {
             switch result {
             case .success(let user):
                 print("Logged In: \(user)")
-
+                self?.performSegue(withIdentifier: "MyIdentifier", sender: nil)
                 NotificationCenter.default.post(name: Notification.Name("login"), object: nil)
+                
 
             case .failure(let error):
                 

@@ -5,7 +5,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     private enum Constants {
         static let loginNavigationControllerIdentifier = "LoginNavigationController"
-        static let feedNavigationControllerIdentifier = "FeedNavigationController"
         static let storyboardIdentifier = "Main"
     }
 
@@ -33,7 +32,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     private func login() {
         let storyboard = UIStoryboard(name: Constants.storyboardIdentifier, bundle: nil)
-        self.window?.rootViewController = storyboard.instantiateViewController(withIdentifier: Constants.feedNavigationControllerIdentifier)
     }
 
     private func logOut() {
