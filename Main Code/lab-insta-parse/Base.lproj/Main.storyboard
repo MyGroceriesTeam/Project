@@ -412,7 +412,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjE-KJ-ibE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjE-KJ-ibE">
                                 <rect key="frame" x="50" y="670" width="290" height="115"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -481,15 +481,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YJI-RT-Zv1">
-                                <rect key="frame" x="70" y="131" width="250" height="51.666666666666657"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <textInputTraits key="textInputTraits"/>
+                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RNA-t9-eSD">
+                                <rect key="frame" x="130" y="600" width="130" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <menu key="menu" id="X1V-Yf-n7L">
+                                    <children>
+                                        <command title="Fruit" id="yba-wM-QIy"/>
+                                        <command title="Vegetable" id="ltz-fr-Q2H"/>
+                                        <command title="Dairy" id="zEf-yn-gnL"/>
+                                        <command title="Protein" id="jxA-Ua-OIm"/>
+                                        <command title="Grain" id="KqQ-BP-R8G"/>
+                                        <command title="Frozen" id="vMf-eq-P4o"/>
+                                        <command title="Condiments/Sauces" id="yut-Y0-jtt"/>
+                                        <command title="Drinks" id="oek-eF-bk4"/>
+                                        <command title="Snacks" id="LtD-L2-lpS"/>
+                                        <command title="Other" id="qkq-Qi-cPg"/>
+                                    </children>
+                                </menu>
+                                <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="didTapNameEditor:" destination="Ubw-in-bMv" eventType="editingDidEnd" id="7xe-kJ-eT5"/>
+                                    <action selector="categorySelected:" destination="Ubw-in-bMv" eventType="touchUpInside" id="qcZ-kx-5oM"/>
                                 </connections>
-                            </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="01W-DS-BCE">
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Notes..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f4V-lZ-HhA">
+                                <rect key="frame" x="50" y="670" width="290" height="115"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="115" id="nzI-ZP-tN9"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="01W-DS-BCE">
                                 <rect key="frame" x="65" y="482" width="260" height="103"/>
                                 <subviews>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="YpX-9u-QGB">
@@ -506,57 +530,43 @@
                                     </datePicker>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="t6w-N4-snf">
-                                <rect key="frame" x="85" y="220" width="220" height="212.33333333333337"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Llu-oK-GTd" appends="YES" id="LNW-Ac-BIO"/>
-                                </connections>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Notes..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4bu-nx-Wqu">
-                                <rect key="frame" x="50" y="670" width="290" height="115"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="115" id="lG9-0Q-al8"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YJI-RT-Zv1">
+                                <rect key="frame" x="70" y="131" width="250" height="51.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="DidTapNotesEditor:" destination="Ubw-in-bMv" eventType="editingDidEnd" id="ABp-1i-1AJ"/>
+                                    <action selector="didTapNameEditor:" destination="Ubw-in-bMv" eventType="editingDidEnd" id="7xe-kJ-eT5"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RNA-t9-eSD">
-                                <rect key="frame" x="172" y="600" width="46" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <menu key="menu" id="X1V-Yf-n7L">
-                                    <children>
-                                        <command title="Item 1" id="yba-wM-QIy"/>
-                                        <command title="Item 2" id="ltz-fr-Q2H"/>
-                                    </children>
-                                </menu>
-                                <state key="normal" title="Button"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="t6w-N4-snf">
+                                <rect key="frame" x="85" y="221.66666666666663" width="220" height="209.33333333333337"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="212.33333333333337" id="GXV-7y-WXA"/>
+                                </constraints>
                                 <connections>
-                                    <action selector="didTapCategoryEditor:" destination="Ubw-in-bMv" eventType="touchUpInside" id="Woq-Be-yby"/>
+                                    <outletCollection property="gestureRecognizers" destination="Llu-oK-GTd" appends="YES" id="QFb-Wq-cJn"/>
                                 </connections>
-                            </button>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Sf9-Sz-kfx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="t6w-N4-snf" firstAttribute="top" secondItem="YJI-RT-Zv1" secondAttribute="bottom" constant="37.333333333333314" id="36P-lH-ZQk"/>
-                            <constraint firstItem="4bu-nx-Wqu" firstAttribute="top" secondItem="RNA-t9-eSD" secondAttribute="bottom" constant="37" id="4sF-VG-lP8"/>
+                            <constraint firstItem="Sf9-Sz-kfx" firstAttribute="bottom" secondItem="f4V-lZ-HhA" secondAttribute="bottom" constant="25" id="4bE-lL-MCP"/>
                             <constraint firstItem="Sf9-Sz-kfx" firstAttribute="trailing" secondItem="t6w-N4-snf" secondAttribute="trailing" constant="85" id="62d-ol-3cj"/>
-                            <constraint firstItem="Sf9-Sz-kfx" firstAttribute="bottom" secondItem="4bu-nx-Wqu" secondAttribute="bottom" constant="25" id="Bgj-Bq-75u"/>
+                            <constraint firstItem="f4V-lZ-HhA" firstAttribute="leading" secondItem="Sf9-Sz-kfx" secondAttribute="leading" constant="50" id="7x0-hA-XJA"/>
                             <constraint firstItem="Sf9-Sz-kfx" firstAttribute="trailing" secondItem="01W-DS-BCE" secondAttribute="trailing" constant="65" id="CbM-fl-mMm"/>
                             <constraint firstItem="YJI-RT-Zv1" firstAttribute="top" secondItem="Sf9-Sz-kfx" secondAttribute="top" constant="40" id="JhN-G3-ePQ"/>
-                            <constraint firstItem="RNA-t9-eSD" firstAttribute="leading" secondItem="Sf9-Sz-kfx" secondAttribute="leading" constant="172" id="QNq-BN-LQS"/>
+                            <constraint firstItem="f4V-lZ-HhA" firstAttribute="top" secondItem="RNA-t9-eSD" secondAttribute="bottom" constant="37" id="Nh5-8l-sEO"/>
+                            <constraint firstItem="RNA-t9-eSD" firstAttribute="leading" secondItem="Sf9-Sz-kfx" secondAttribute="leading" constant="130" id="QNq-BN-LQS"/>
                             <constraint firstItem="YJI-RT-Zv1" firstAttribute="leading" secondItem="Sf9-Sz-kfx" secondAttribute="leading" constant="70" id="UM9-Oc-lcx"/>
                             <constraint firstItem="RNA-t9-eSD" firstAttribute="top" secondItem="01W-DS-BCE" secondAttribute="bottom" constant="15" id="VFq-2R-bNK"/>
-                            <constraint firstItem="Sf9-Sz-kfx" firstAttribute="trailing" secondItem="RNA-t9-eSD" secondAttribute="trailing" constant="172" id="dvG-Rw-BO8"/>
+                            <constraint firstItem="Sf9-Sz-kfx" firstAttribute="trailing" secondItem="RNA-t9-eSD" secondAttribute="trailing" constant="130" id="dvG-Rw-BO8"/>
                             <constraint firstItem="t6w-N4-snf" firstAttribute="leading" secondItem="Sf9-Sz-kfx" secondAttribute="leading" constant="85" id="m6F-O2-drh"/>
-                            <constraint firstItem="Sf9-Sz-kfx" firstAttribute="trailing" secondItem="4bu-nx-Wqu" secondAttribute="trailing" constant="50" id="nsX-eF-Re6"/>
                             <constraint firstItem="01W-DS-BCE" firstAttribute="leading" secondItem="Sf9-Sz-kfx" secondAttribute="leading" constant="65" id="rHx-j2-OYf"/>
+                            <constraint firstItem="Sf9-Sz-kfx" firstAttribute="trailing" secondItem="f4V-lZ-HhA" secondAttribute="trailing" constant="50" id="sbI-5s-HoS"/>
                             <constraint firstItem="01W-DS-BCE" firstAttribute="top" secondItem="t6w-N4-snf" secondAttribute="bottom" constant="49.666666666666742" id="ubT-B1-5n4"/>
-                            <constraint firstItem="4bu-nx-Wqu" firstAttribute="leading" secondItem="Sf9-Sz-kfx" secondAttribute="leading" constant="50" id="vyV-tG-19X"/>
                             <constraint firstItem="Sf9-Sz-kfx" firstAttribute="trailing" secondItem="YJI-RT-Zv1" secondAttribute="trailing" constant="70" id="wf2-ZR-RzX"/>
                         </constraints>
                     </view>
@@ -568,21 +578,21 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="categoryEditor" destination="RNA-t9-eSD" id="9Ce-Kt-uXl"/>
+                        <outlet property="categoryPicker" destination="RNA-t9-eSD" id="9My-rM-IbK"/>
                         <outlet property="expiredDatePicker" destination="QMK-DB-X0M" id="FnL-NV-Q0A"/>
                         <outlet property="imageViewer" destination="t6w-N4-snf" id="Ilg-gi-KzH"/>
                         <outlet property="itemNameTextEditor" destination="YJI-RT-Zv1" id="ozJ-v3-YuR"/>
-                        <outlet property="notesEditor" destination="4bu-nx-Wqu" id="sxz-Ll-kqK"/>
+                        <outlet property="notesEditor" destination="f4V-lZ-HhA" id="Rb8-E8-ShO"/>
                         <outlet property="purchasedDatePicker" destination="YpX-9u-QGB" id="lgz-W1-aBj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A0Q-tO-1RX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="vON-sw-oSg"/>
                 <tapGestureRecognizer id="Llu-oK-GTd">
                     <connections>
                         <action selector="didTapImageEditor:" destination="Ubw-in-bMv" id="bdd-P7-fB5"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="vON-sw-oSg"/>
             </objects>
             <point key="canvasLocation" x="1747.6923076923076" y="1424.6445497630332"/>
         </scene>

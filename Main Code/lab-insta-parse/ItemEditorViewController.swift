@@ -2,7 +2,7 @@
 //  ItemEditorViewController.swift
 //  MyGroceries
 //
-//  Created by Frannie Witbeck on 11/10/23.
+//  Created by Catherine McGinnis on 11/10/23.
 //
 
 import UIKit
@@ -11,19 +11,47 @@ import ParseSwift
 
 class ItemEditorViewController: UIViewController {
     
+    var categories = ["Fruits", "Vegetables", "Dairy", "Protein", "Grain", "Frozen", "Condiments", "Drinks", "Snacks", "Other"]
+    
+    var selectedCategory: String?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
+        // Set the data source and delegate for the picker
+
+        let menuClosure = {(action: UIAction) in
+                   
+           }
+        categoryPicker.menu = UIMenu(children: [
+               UIAction(title: "Fruit", state: .on, handler:
+                                   menuClosure),
+               UIAction(title: "Vegetable", handler: menuClosure),
+               UIAction(title: "Dairy", handler: menuClosure),
+               UIAction(title: "Protein", handler: menuClosure),
+               UIAction(title: "Grain", handler: menuClosure),
+               UIAction(title: "Frozen", handler: menuClosure),
+               UIAction(title: "Condiment", handler: menuClosure),
+               UIAction(title: "Drink", handler: menuClosure),
+               UIAction(title: "Snack", handler: menuClosure),
+               UIAction(title: "Other", handler: menuClosure),
+           ])
+       categoryPicker.showsMenuAsPrimaryAction = true
+       categoryPicker.changesSelectionAsPrimaryAction = true
+        
+        
     }
+    
     
     @IBOutlet weak var itemNameTextEditor: UITextField!
     @IBOutlet weak var imageViewer: UIImageView!
     @IBOutlet weak var purchasedDatePicker: UIDatePicker!
     @IBOutlet weak var expiredDatePicker: UIDatePicker!
-    @IBOutlet weak var categoryEditor: UIButton!
-    @IBOutlet weak var notesEditor: UITextField!
+    @IBOutlet weak var categoryPicker: UIButton!
+    @IBOutlet weak var notesEditor: UITextView!
     
     private var pickedImage: UIImage?
     
@@ -105,48 +133,24 @@ class ItemEditorViewController: UIViewController {
         foodItem.itemName = itemNameTextEditor.text
         foodItem.purchaseDate = purchasedDatePicker.date
         foodItem.expirationDate = expiredDatePicker.date
-        foodItem.category = categoryEditor.currentTitle
+        
+        if let selectedCategory = selectedCategory {
+                    foodItem.category = selectedCategory
+                } else {
+                    // Handle the case where no valid category is selected
+                    // You might want to show an alert or set a default category here
+                    foodItem.category = "Fruit"
+                }
+        
         foodItem.notes = notesEditor.text
     }
     
-}
-
-// Helper methods to present various alerts
-extension ItemEditorViewController {
-
-    func presentGoToSettingsAlert() {
-        let alertController = UIAlertController (
-            title: "Photo Access Required",
-            message: "In order to post a photo to complete a task, we need access to your photo library. You can allow access in Settings",
-            preferredStyle: .alert)
-
-        let settingsAction = UIAlertAction(title: "Settings", style: .default) { _ in
-            guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }
-
-            if UIApplication.shared.canOpenURL(settingsUrl) {
-                UIApplication.shared.open(settingsUrl)
-            }
+    @IBAction func categorySelected(_ sender: UIButton) {
+        if let title = sender.currentTitle {
+            selectedCategory = title
         }
-
-        alertController.addAction(settingsAction)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        alertController.addAction(cancelAction)
-
-        present(alertController, animated: true, completion: nil)
     }
-
-    /// Show an alert for the given error
-    private func showAlert1(for error: Error? = nil) {
-        let alertController = UIAlertController(
-            title: "Oops...",
-            message: "\(error?.localizedDescription ?? "Please try again...")",
-            preferredStyle: .alert)
-
-        let action = UIAlertAction(title: "OK", style: .default)
-        alertController.addAction(action)
-
-        present(alertController, animated: true)
-    }
+    
 }
 
 extension ItemEditorViewController: PHPickerViewControllerDelegate {
@@ -189,6 +193,42 @@ extension ItemEditorViewController: PHPickerViewControllerDelegate {
             }
         }
     }
-    
+}
 
+// Helper methods to present various alerts
+extension ItemEditorViewController {
+
+    func presentGoToSettingsAlert() {
+        let alertController = UIAlertController (
+            title: "Photo Access Required",
+            message: "In order to post a photo to complete a task, we need access to your photo library. You can allow access in Settings",
+            preferredStyle: .alert)
+
+        let settingsAction = UIAlertAction(title: "Settings", style: .default) { _ in
+            guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }
+
+            if UIApplication.shared.canOpenURL(settingsUrl) {
+                UIApplication.shared.open(settingsUrl)
+            }
+        }
+
+        alertController.addAction(settingsAction)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+
+        present(alertController, animated: true, completion: nil)
+    }
+
+    /// Show an alert for the given error
+    private func showAlert1(for error: Error? = nil) {
+        let alertController = UIAlertController(
+            title: "Oops...",
+            message: "\(error?.localizedDescription ?? "Please try again...")",
+            preferredStyle: .alert)
+
+        let action = UIAlertAction(title: "OK", style: .default)
+        alertController.addAction(action)
+
+        present(alertController, animated: true)
+    }
 }
