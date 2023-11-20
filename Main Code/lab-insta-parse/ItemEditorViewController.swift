@@ -9,7 +9,7 @@ import UIKit
 import PhotosUI
 import ParseSwift
 
-class ItemEditorViewController: UIViewController {
+class ItemEditorViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     var categories = ["Fruits", "Vegetables", "Dairy", "Protein", "Grain", "Frozen", "Condiments", "Drinks", "Snacks", "Other"]
     
@@ -72,8 +72,7 @@ class ItemEditorViewController: UIViewController {
             // Check if the device has a camera available
             if UIImagePickerController.isSourceTypeAvailable(.camera) {
                 let imagePicker = UIImagePickerController()
-                imagePicker.delegate = self as? any UIImagePickerControllerDelegate & UINavigationControllerDelegate
-                imagePicker.sourceType = .camera
+                imagePicker.delegate = self
                 imagePicker.allowsEditing = false // You can set this to true if you want to allow editing
 
                 self?.present(imagePicker, animated: true, completion: nil)
@@ -133,6 +132,8 @@ class ItemEditorViewController: UIViewController {
               let imageData = image.jpegData(compressionQuality: 0.1) else {
             return
         }
+        
+        
 
         // Create a Parse File by providing a name and passing in the image data
         let imageFile = ParseFile(name: "image.jpg", data: imageData)
@@ -180,6 +181,7 @@ class ItemEditorViewController: UIViewController {
     @IBAction func categorySelected(_ sender: UIButton) {
         if let title = sender.currentTitle {
             selectedCategory = title
+            categoryPicker.setTitle(title, for: .normal)
         }
     }
     

@@ -6,13 +6,47 @@
 //
 
 import UIKit
+import PhotosUI
+import ParseSwift
+import Alamofire
+import AlamofireImage
 
 class ItemDetailViewController: UIViewController {
-
+    
+    var foodItem: FoodItem?
+    private var imageDataRequest: DataRequest?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        // Date casting
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        itemNameLabel.text = foodItem?.itemName
+        datePurchasedLabel.text = dateFormatter.string(from: (foodItem?.purchaseDate)!)
+        dateExpiredLabel.text = dateFormatter.string(from: (foodItem?.expirationDate)!)
+        itemCategoryLabel.text = foodItem?.category
+        notesLabel.text = foodItem?.notes
+        
+        // Image
+        if let imageFile = foodItem?.itemImage,
+           let imageUrl = imageFile.url {
+
+            // Use AlamofireImage helper to fetch remote image from URL
+            imageDataRequest = AF.request(imageUrl).responseImage { [weak self] response in
+                switch response.result {
+                case .success(let image):
+                    // Set image view image with fetched image
+                    self?.itemImageLabel.image = image
+                case .failure(let error):
+                    print("❌ Error fetching image: \(error.localizedDescription)")
+                    break
+                }
+            }
+        }
     }
     
     @IBOutlet weak var itemNameLabel: UILabel!
@@ -22,27 +56,4 @@ class ItemDetailViewController: UIViewController {
     @IBOutlet weak var dateExpiredLabel: UILabel!
     @IBOutlet weak var itemImageLabel: UIImageView!
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-//    @IBOutlet weak var dateLabels: UILabel!
-//
-//    override func viewDidLayoutSubviews() {
-//        super.viewDidLayoutSubviews()
-//
-//        dateLabels.layer.cornerRadius = 2
-//
-//    }
-    
-    
 }
-
-
