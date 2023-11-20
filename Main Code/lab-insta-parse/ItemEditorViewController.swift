@@ -39,9 +39,10 @@ class ItemEditorViewController: UIViewController {
                UIAction(title: "Snack", handler: menuClosure),
                UIAction(title: "Other", handler: menuClosure),
            ])
-       categoryPicker.showsMenuAsPrimaryAction = true
-       categoryPicker.changesSelectionAsPrimaryAction = true
+        categoryPicker.showsMenuAsPrimaryAction = true
+        categoryPicker.changesSelectionAsPrimaryAction = true
         
+        // purchasedDatePicker.addTarget(self, action: #selector(purchasedDatePickerValueChanged(_:)), for: .valueChanged)
         
     }
     
@@ -126,6 +127,16 @@ class ItemEditorViewController: UIViewController {
         // Dismiss Keyboard
         view.endEditing(true)
         
+        // Unwrap optional pickedImage
+        guard let image = pickedImage,
+              // Create and compress image data (jpeg) from UIImage
+              let imageData = image.jpegData(compressionQuality: 0.1) else {
+            return
+        }
+
+        // Create a Parse File by providing a name and passing in the image data
+        let imageFile = ParseFile(name: "image.jpg", data: imageData)
+        
         // Create Food Item
         var foodItem = FoodItem()
         
@@ -143,6 +154,27 @@ class ItemEditorViewController: UIViewController {
                 }
         
         foodItem.notes = notesEditor.text
+        
+        // Save post (async)
+        foodItem.save { [weak self] result in
+
+            // Switch to the main thread for any UI updates
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let post):
+                    print("✅ Item Saved! \(post)")
+                    
+                    DispatchQueue.main.async {
+                        // Return to previous view controller
+                        self?.navigationController?.popViewController(animated: true)
+                    }
+                    
+                case .failure(let error):
+                    self?.showAlert(description: error.localizedDescription)
+                }
+            }
+        }
+        
     }
     
     @IBAction func categorySelected(_ sender: UIButton) {
@@ -150,6 +182,7 @@ class ItemEditorViewController: UIViewController {
             selectedCategory = title
         }
     }
+    
     
 }
 
