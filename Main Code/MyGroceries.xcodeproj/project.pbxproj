@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		437DA61A2B12AEA10098478A /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437DA6192B12AEA10098478A /* ItemDetailViewController.swift */; };
+		437DA61C2B12AEE60098478A /* ItemEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437DA61B2B12AEE60098478A /* ItemEditorViewController.swift */; };
 		C2A9C5C52B05317A004E237F /* ItemCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A9C5C42B05317A004E237F /* ItemCategoriesViewController.swift */; };
 		C2B183C52B07A13D0007DBDF /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B183C42B07A13D0007DBDF /* Category.swift */; };
 		C2B183C72B110BE10007DBDF /* ItemListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B183C62B110BE10007DBDF /* ItemListDelegate.swift */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		437DA6192B12AEA10098478A /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
+		437DA61B2B12AEE60098478A /* ItemEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemEditorViewController.swift; sourceTree = "<group>"; };
 		C2A9C5C42B05317A004E237F /* ItemCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCategoriesViewController.swift; sourceTree = "<group>"; };
 		C2B183C42B07A13D0007DBDF /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		C2B183C62B110BE10007DBDF /* ItemListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			children = (
 				437DA6192B12AEA10098478A /* ItemDetailViewController.swift */,
 				CB73D394290E3B4A00C12538 /* AppDelegate.swift */,
+				437DA61B2B12AEE60098478A /* ItemEditorViewController.swift */,
 				CB73D396290E3B4A00C12538 /* SceneDelegate.swift */,
 				C2B183C62B110BE10007DBDF /* ItemListDelegate.swift */,
 				CB7896FB29371C2300635932 /* Models */,
@@ -265,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB13E51F2913A16C008F45BB /* PostCell.swift in Sources */,
+				437DA61C2B12AEE60098478A /* ItemEditorViewController.swift in Sources */,
 				C2B183C52B07A13D0007DBDF /* Category.swift in Sources */,
 				CBCDFAFE291144DA001F1CF1 /* PostViewController.swift in Sources */,
 				C2A9C5C52B05317A004E237F /* ItemCategoriesViewController.swift in Sources */,
