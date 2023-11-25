@@ -8,6 +8,7 @@
 import Foundation
 import ParseSwift
 import UIKit
+import AlamofireImage
 
 struct Item{
     var itemName: String
@@ -19,17 +20,11 @@ struct Item{
 
 extension Item{
     static var mockItem: [Item]  = [
-        Item(itemName: "Apple", expirationDate: "/23/2024", purchasedDate:"11/28/2023" , itemCategory: "Fruits", itemPicture: #imageLiteral(resourceName: "photo-1570913149827-d2ac84ab3f9a.webp")),
-            Item(itemName: "Pork Chops", expirationDate: "12/02/2023", purchasedDate: "11/24/2023", itemCategory: "Meats", itemPicture: #imageLiteral(resourceName: "GUEST_3bbbffcd-96f2-46cc-8786-4ea8f2fffcf0.jpeg")),
-            Item(itemName: "Mixed Greens", expirationDate: "01/02/2024", purchasedDate: "12/18/2023", itemCategory: "Vegetables", itemPicture:#imageLiteral(resourceName: "csm_46819_SN_Mixed_Greens_D_db4c673297.jpg.webp") )
+        Item(itemName: "Apple", expirationDate: "01/23/2024", purchasedDate:"11/28/2023" , itemCategory: "Fruits", itemPicture: Image(imageLiteralResourceName: "Apple")),
+            Item(itemName: "Pork Chops", expirationDate: "12/02/2023", purchasedDate: "11/24/2023", itemCategory: "Meats", itemPicture: Image(imageLiteralResourceName: "Meat")),
+            Item(itemName: "Mixed Greens", expirationDate: "01/02/2024", purchasedDate: "12/18/2023", itemCategory: "Vegetables", itemPicture: Image(imageLiteralResourceName: "Mixed Greens") )
         ]
 
 }
 
-func configure(with item: Item) {
-    ItemNameLabel.text = track.trackName
-    artistNameLabel.text = track.artistName
 
-    // Load image async via Nuke library image loading helper method
-    Nuke.loadImage(with: track.artworkUrl100, into: trackImageView)
-}

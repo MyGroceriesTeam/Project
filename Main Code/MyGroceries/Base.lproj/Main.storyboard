@@ -158,6 +158,11 @@
                                                 <constraint firstItem="ANi-Cj-ey7" firstAttribute="top" secondItem="V6n-RX-otE" secondAttribute="bottom" constant="25.666666666666671" id="ukP-BB-0wZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="CategoryCountLabel" destination="ANi-Cj-ey7" id="0xI-0A-HWe"/>
+                                            <outlet property="CategoryImage" destination="xoe-u1-qCa" id="hen-xs-cJK"/>
+                                            <outlet property="CategoryNameLabel" destination="V6n-RX-otE" id="QyE-w3-Blx"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -166,6 +171,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="efI-Wl-mME"/>
+                    <connections>
+                        <outlet property="TableView" destination="WVf-d8-xcP" id="a0I-xV-Sgd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fbz-xd-FNF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -256,6 +264,7 @@
                                                 <constraint firstItem="FYh-bw-tLD" firstAttribute="leading" secondItem="iJ4-tp-PB6" secondAttribute="trailing" constant="30" id="uDQ-4P-x9G"/>
                                                 <constraint firstItem="lFT-LF-hrZ" firstAttribute="top" secondItem="m63-lJ-Yrx" secondAttribute="bottom" constant="32" id="wsw-Fb-Gky"/>
                                                 <constraint firstAttribute="trailing" secondItem="ZAA-Ty-rrq" secondAttribute="trailing" constant="10" id="yzH-CL-G8T"/>
+                                                <constraint firstItem="iJ4-tp-PB6" firstAttribute="leading" secondItem="0tL-ax-YbZ" secondAttribute="leading" constant="10.666666666666671" id="zqp-vL-KXl"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -276,6 +285,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="KAQ-9q-zZ9"/>
+                    <connections>
+                        <outlet property="tableView" destination="jWH-Mt-DAs" id="CTr-gM-jD5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="llG-TN-M7t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

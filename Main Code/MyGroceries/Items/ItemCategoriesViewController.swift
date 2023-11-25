@@ -7,12 +7,31 @@
 
 import UIKit
 
-class ItemCategoriesViewController: UIViewController {
+class ItemCategoriesViewController: UIViewController, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return categories.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCategoryCell", for: indexPath) as! ItemCategoriesTableViewCell
 
+        
+        let category = categories[indexPath.row]
+        cell.configure(with: category)
+        
+        return cell
+    }
+    
+    var categories: [Category] = []
+
+    @IBOutlet weak var TableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        categories = Category.mockCategories
+        print(categories)
+        
+        TableView.dataSource = self
     }
     
 }

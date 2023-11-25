@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C2A9C5C52B05317A004E237F /* ItemCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A9C5C42B05317A004E237F /* ItemCategoriesViewController.swift */; };
-		C2B183C52B07A13D0007DBDF /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B183C42B07A13D0007DBDF /* Categories.swift */; };
+		C2B183C52B07A13D0007DBDF /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B183C42B07A13D0007DBDF /* Category.swift */; };
+		C2B183C72B110BE10007DBDF /* ItemListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B183C62B110BE10007DBDF /* ItemListDelegate.swift */; };
 		C2D375F82B076C9900635BEB /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D375F72B076C9900635BEB /* ItemListViewController.swift */; };
 		C2D375FA2B07789D00635BEB /* ItemListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D375F92B07789D00635BEB /* ItemListTableViewCell.swift */; };
 		C2D375FC2B077E7000635BEB /* ItemCategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D375FB2B077E7000635BEB /* ItemCategoriesTableViewCell.swift */; };
@@ -33,7 +34,8 @@
 
 /* Begin PBXFileReference section */
 		C2A9C5C42B05317A004E237F /* ItemCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCategoriesViewController.swift; sourceTree = "<group>"; };
-		C2B183C42B07A13D0007DBDF /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		C2B183C42B07A13D0007DBDF /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		C2B183C62B110BE10007DBDF /* ItemListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListDelegate.swift; sourceTree = "<group>"; };
 		C2D375F72B076C9900635BEB /* ItemListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
 		C2D375F92B07789D00635BEB /* ItemListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListTableViewCell.swift; sourceTree = "<group>"; };
 		C2D375FB2B077E7000635BEB /* ItemCategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCategoriesTableViewCell.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			children = (
 				CB73D394290E3B4A00C12538 /* AppDelegate.swift */,
 				CB73D396290E3B4A00C12538 /* SceneDelegate.swift */,
+				C2B183C62B110BE10007DBDF /* ItemListDelegate.swift */,
 				CB7896FB29371C2300635932 /* Models */,
 				C2A9C5C62B076516004E237F /* Items */,
 				C2D375FD2B077E7B00635BEB /* Cells */,
@@ -172,7 +175,7 @@
 				CB7896FC29371C3C00635932 /* User.swift */,
 				CB7896FE29371C4900635932 /* Post.swift */,
 				C2D375FE2B079FF400635BEB /* Item.swift */,
-				C2B183C42B07A13D0007DBDF /* Categories.swift */,
+				C2B183C42B07A13D0007DBDF /* Category.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -259,7 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB13E51F2913A16C008F45BB /* PostCell.swift in Sources */,
-				C2B183C52B07A13D0007DBDF /* Categories.swift in Sources */,
+				C2B183C52B07A13D0007DBDF /* Category.swift in Sources */,
 				CBCDFAFE291144DA001F1CF1 /* PostViewController.swift in Sources */,
 				C2A9C5C52B05317A004E237F /* ItemCategoriesViewController.swift in Sources */,
 				CBE72850293741370005CA57 /* ViewController+Extensions.swift in Sources */,
@@ -270,6 +273,7 @@
 				CB7896FD29371C3C00635932 /* User.swift in Sources */,
 				CB6997512911044D007EDA6B /* SignUpViewController.swift in Sources */,
 				C2D375FF2B079FF400635BEB /* Item.swift in Sources */,
+				C2B183C72B110BE10007DBDF /* ItemListDelegate.swift in Sources */,
 				CB13E5212913B10B008F45BB /* DateFormatter+Extensions.swift in Sources */,
 				C2D375FA2B07789D00635BEB /* ItemListTableViewCell.swift in Sources */,
 				CB73D397290E3B4A00C12538 /* SceneDelegate.swift in Sources */,
