@@ -555,7 +555,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="38L-1L-fla">
-                                <rect key="frame" x="0.0" y="625" width="390" height="33"/>
+                                <rect key="frame" x="0.0" y="576" width="390" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <menu key="menu" id="huI-Mt-jcf">
                                     <children>
@@ -574,7 +574,7 @@
                                 <state key="normal" title="Button"/>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Notes..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sUN-2i-U8R">
-                                <rect key="frame" x="0.0" y="695" width="390" height="115"/>
+                                <rect key="frame" x="0.0" y="646" width="390" height="115"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="115" id="Jhj-X8-Hxk"/>
@@ -584,13 +584,13 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="iqj-8v-yrW">
-                                <rect key="frame" x="0.0" y="442" width="390" height="183"/>
+                                <rect key="frame" x="0.0" y="442" width="390" height="134"/>
                                 <subviews>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="tqI-8z-6Bk">
                                         <rect key="frame" x="65" y="0.0" width="260" height="50"/>
                                     </datePicker>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="lda-EC-6qa">
-                                        <rect key="frame" x="65" y="133" width="260" height="50"/>
+                                        <rect key="frame" x="65" y="84" width="260" height="50"/>
                                     </datePicker>
                                 </subviews>
                             </stackView>
@@ -605,6 +605,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="212.33333333333337" id="i51-D7-Kat"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="D4R-6T-eOb" appends="YES" id="X2y-bA-N2q"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zU2-3O-Jsa"/>
@@ -635,6 +638,7 @@
                     <navigationItem key="navigationItem" id="KdZ-ho-CUi"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9e1-Ae-GLy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="D4R-6T-eOb"/>
             </objects>
             <point key="canvasLocation" x="1854" y="2114"/>
         </scene>
