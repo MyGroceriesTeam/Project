@@ -451,10 +451,10 @@
             </objects>
             <point key="canvasLocation" x="107.69230769230769" y="1390.5213270142178"/>
         </scene>
-        <!--View Controller-->
+        <!--Item Detail View Controller-->
         <scene sceneID="XA6-sa-5aa">
             <objects>
-                <viewController id="pJb-yc-SdA" sceneMemberID="viewController">
+                <viewController id="pJb-yc-SdA" customClass="ItemDetailViewController" customModule="MyGroceries" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uoM-oA-vzb">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -541,15 +541,23 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Oqk-qg-PaJ"/>
+                    <connections>
+                        <outlet property="dateExpiredLabel" destination="HlD-TL-fsm" id="bAE-Bc-owL"/>
+                        <outlet property="datePurchasedLabel" destination="bsl-zb-g9X" id="7eG-1x-mIV"/>
+                        <outlet property="itemCategoryLabel" destination="Fwt-uw-Fdx" id="cIC-gR-BPA"/>
+                        <outlet property="itemImageLabel" destination="kx1-FE-HdT" id="oSE-NO-rfS"/>
+                        <outlet property="itemNameLabel" destination="ItN-dR-tEU" id="NJQ-Bn-BCp"/>
+                        <outlet property="notesLabel" destination="kF0-tY-2xB" id="zN2-tc-ny0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G0N-Z9-cxt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="942" y="2114"/>
         </scene>
-        <!--View Controller-->
+        <!--Item Editor View Controller-->
         <scene sceneID="Of8-Cx-8hI">
             <objects>
-                <viewController id="Wlt-eb-yq5" sceneMemberID="viewController">
+                <viewController id="Wlt-eb-yq5" customClass="ItemEditorViewController" customModule="MyGroceries" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pEh-3M-JlB">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -573,16 +581,6 @@
                                 </menu>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Notes..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sUN-2i-U8R">
-                                <rect key="frame" x="0.0" y="646" width="390" height="115"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="115" id="Jhj-X8-Hxk"/>
-                                </constraints>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="iqj-8v-yrW">
                                 <rect key="frame" x="0.0" y="442" width="390" height="134"/>
                                 <subviews>
@@ -606,9 +604,19 @@
                                     <constraint firstAttribute="height" constant="212.33333333333337" id="i51-D7-Kat"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="D4R-6T-eOb" appends="YES" id="X2y-bA-N2q"/>
+                                    <outletCollection property="gestureRecognizers" destination="D4R-6T-eOb" appends="YES" id="iI7-be-uTy"/>
                                 </connections>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Notes..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sUN-2i-U8R">
+                                <rect key="frame" x="0.0" y="646" width="390" height="115"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="115" id="Jhj-X8-Hxk"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zU2-3O-Jsa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -636,6 +644,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KdZ-ho-CUi"/>
+                    <connections>
+                        <outlet property="categoryPicker" destination="huI-Mt-jcf" id="Dyd-Mi-dOT"/>
+                        <outlet property="expiredDatePicker" destination="lda-EC-6qa" id="RfR-z0-KI5"/>
+                        <outlet property="imageViewer" destination="KUz-np-Bci" id="4Z9-68-ICY"/>
+                        <outlet property="itemNameTextEditor" destination="Icx-HZ-Pu2" id="gJT-mw-B1O"/>
+                        <outlet property="notesEditor" destination="sUN-2i-U8R" id="wSq-92-ZI7"/>
+                        <outlet property="purchasedDatePicker" destination="tqI-8z-6Bk" id="xnn-0f-ITT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9e1-Ae-GLy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="D4R-6T-eOb"/>
