@@ -645,7 +645,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="KdZ-ho-CUi"/>
                     <connections>
-                        <outlet property="categoryPicker" destination="huI-Mt-jcf" id="Dyd-Mi-dOT"/>
+                        <outlet property="categoryPicker" destination="huI-Mt-jcf" id="OSf-0r-FGH"/>
                         <outlet property="expiredDatePicker" destination="lda-EC-6qa" id="RfR-z0-KI5"/>
                         <outlet property="imageViewer" destination="KUz-np-Bci" id="4Z9-68-ICY"/>
                         <outlet property="itemNameTextEditor" destination="Icx-HZ-Pu2" id="gJT-mw-B1O"/>
