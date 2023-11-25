@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hot-nK-RXH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hot-nK-RXH">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -434,6 +435,81 @@
             </objects>
             <point key="canvasLocation" x="107.69230769230769" y="1390.5213270142178"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Of8-Cx-8hI">
+            <objects>
+                <viewController id="Wlt-eb-yq5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pEh-3M-JlB">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="38L-1L-fla">
+                                <rect key="frame" x="129" y="568" width="130" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <menu key="menu" id="huI-Mt-jcf">
+                                    <children>
+                                        <command title="Fruit" id="XjS-bI-GH5"/>
+                                        <command title="Vegetable" id="trV-qD-C3l"/>
+                                        <command title="Dairy" id="V4m-Zz-Y0a"/>
+                                        <command title="Protein" id="VL4-tD-6po"/>
+                                        <command title="Grain" id="SEy-Am-wr2"/>
+                                        <command title="Frozen" id="OtS-a9-bWy"/>
+                                        <command title="Condiments/Sauces" id="HuJ-qL-3HX"/>
+                                        <command title="Drinks" id="E3e-Y2-Fje"/>
+                                        <command title="Snacks" id="PCe-FZ-t07"/>
+                                        <command title="Other" id="gR7-9r-qt7"/>
+                                    </children>
+                                </menu>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="Notes..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sUN-2i-U8R">
+                                <rect key="frame" x="49" y="638" width="290" height="115"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="115" id="Jhj-X8-Hxk"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="equalCentering" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="iqj-8v-yrW">
+                                <rect key="frame" x="64" y="450" width="260" height="103"/>
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="tqI-8z-6Bk">
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="50"/>
+                                    </datePicker>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="lda-EC-6qa">
+                                        <rect key="frame" x="0.0" y="53" width="260" height="50"/>
+                                    </datePicker>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Icx-HZ-Pu2">
+                                <rect key="frame" x="69" y="99" width="250" height="51.66666666666697"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" ambiguous="YES" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="KUz-np-Bci">
+                                <rect key="frame" x="84" y="189" width="220" height="209.33333333333348"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="212.33333333333337" id="i51-D7-Kat"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zU2-3O-Jsa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="38L-1L-fla" firstAttribute="top" secondItem="iqj-8v-yrW" secondAttribute="bottom" constant="15" id="3rp-hi-O76"/>
+                            <constraint firstItem="iqj-8v-yrW" firstAttribute="top" secondItem="KUz-np-Bci" secondAttribute="bottom" constant="49.666666666666742" id="iow-yK-93r"/>
+                            <constraint firstItem="sUN-2i-U8R" firstAttribute="top" secondItem="38L-1L-fla" secondAttribute="bottom" constant="37" id="kPS-S1-cte"/>
+                            <constraint firstItem="KUz-np-Bci" firstAttribute="top" secondItem="Icx-HZ-Pu2" secondAttribute="bottom" constant="37.333333333333314" id="wox-4H-Keq"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9e1-Ae-GLy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1854" y="2114"/>
+        </scene>
         <!--Categories-->
         <scene sceneID="jr8-gJ-Ppx">
             <objects>
@@ -458,17 +534,21 @@
         <image name="LOGO" width="400" height="400"/>
         <image name="list.bullet" catalog="system" width="128" height="87"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="photo" catalog="system" width="128" height="93"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="square.grid.2x2" catalog="system" width="128" height="114"/>
         <image name="trash" catalog="system" width="117" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemCyanColor">
-            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.1960784314" green="0.67843137249999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
