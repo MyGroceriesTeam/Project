@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		437DA61A2B12AEA10098478A /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437DA6192B12AEA10098478A /* ItemDetailViewController.swift */; };
 		437DA61C2B12AEE60098478A /* ItemEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437DA61B2B12AEE60098478A /* ItemEditorViewController.swift */; };
+		437DA61E2B12AF310098478A /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437DA61D2B12AF310098478A /* FoodItem.swift */; };
 		C2A9C5C52B05317A004E237F /* ItemCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A9C5C42B05317A004E237F /* ItemCategoriesViewController.swift */; };
 		C2B183C52B07A13D0007DBDF /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B183C42B07A13D0007DBDF /* Category.swift */; };
 		C2B183C72B110BE10007DBDF /* ItemListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B183C62B110BE10007DBDF /* ItemListDelegate.swift */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		437DA6192B12AEA10098478A /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		437DA61B2B12AEE60098478A /* ItemEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemEditorViewController.swift; sourceTree = "<group>"; };
+		437DA61D2B12AF310098478A /* FoodItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
 		C2A9C5C42B05317A004E237F /* ItemCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCategoriesViewController.swift; sourceTree = "<group>"; };
 		C2B183C42B07A13D0007DBDF /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		C2B183C62B110BE10007DBDF /* ItemListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			children = (
 				437DA6192B12AEA10098478A /* ItemDetailViewController.swift */,
 				CB73D394290E3B4A00C12538 /* AppDelegate.swift */,
+				437DA61D2B12AF310098478A /* FoodItem.swift */,
 				437DA61B2B12AEE60098478A /* ItemEditorViewController.swift */,
 				CB73D396290E3B4A00C12538 /* SceneDelegate.swift */,
 				C2B183C62B110BE10007DBDF /* ItemListDelegate.swift */,
@@ -271,6 +274,7 @@
 				437DA61C2B12AEE60098478A /* ItemEditorViewController.swift in Sources */,
 				C2B183C52B07A13D0007DBDF /* Category.swift in Sources */,
 				CBCDFAFE291144DA001F1CF1 /* PostViewController.swift in Sources */,
+				437DA61E2B12AF310098478A /* FoodItem.swift in Sources */,
 				C2A9C5C52B05317A004E237F /* ItemCategoriesViewController.swift in Sources */,
 				CBE72850293741370005CA57 /* ViewController+Extensions.swift in Sources */,
 				C2D375FC2B077E7000635BEB /* ItemCategoriesTableViewCell.swift in Sources */,
